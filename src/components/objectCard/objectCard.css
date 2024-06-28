@@ -1,0 +1,15 @@
+.productCard {
+    border: 1px solid;
+    display: flex;
+    margin: 20px;
+    flex-direction: column;
+    width: 200px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.productCard:hover {
+    background-color: rgb(113, 214, 164);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+
+}
