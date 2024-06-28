@@ -12,7 +12,13 @@ const divStyle = {
     alignItems:'center'
 }
 
-function NavigationBar() {
+function NavigationBar({shoppingCart}) {
+    let total = 0
+    //On vérifie si shopping cart n'est pas null avant de mapper sur les élements qu'il contient
+    shoppingCart && shoppingCart.map((product) => {
+        total += product.price
+    })
+
     return (
         <div className={styles.navbar}>
             <div style={divStyle}>
@@ -23,6 +29,7 @@ function NavigationBar() {
             <div style={divStyle}>
                 <img src={panier} style={{width:40}}/>
                 <Link to="/shoppingcart">ShoppingCart</Link>
+                <p>Total {total.toFixed(2)} €</p>
             </div>
         </div>
         

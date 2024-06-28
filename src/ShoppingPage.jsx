@@ -9,6 +9,8 @@ function ShoppingPage() {
     const [products, setProducts] = useState(null)
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(null)
+    const [shoppingCart , setShoppingCart] = useState([])
+
 
 
     useEffect(() => {
@@ -33,17 +35,21 @@ function ShoppingPage() {
     }, [])
 
 
-    console.log(products)
+    const addProduct = (newProduct) => {
+        setShoppingCart([...shoppingCart, newProduct])
+    }
+
+
     return (
         <>
-            <NavigationBar/>
+            <NavigationBar shoppingCart={shoppingCart}/>
             <h1>Shopping page</h1>
             {loading && <p>Veuillez patientez</p>}   
             {error && <p>Une erreur est survenue, merci de réessayer</p>}         
             {/* TODO Faire une carte pour chaque objet */}
             <div style={{display:"flex", flexWrap: "wrap"}}>
             {products && (products.map(product =>
-                <ObjectCard key={product.id} product={product}/>
+                <ObjectCard key={product.id} product={product} addProduct={addProduct}/>
             ))}
             </div>
         </>
