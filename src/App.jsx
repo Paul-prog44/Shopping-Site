@@ -4,7 +4,7 @@ import Homepage from './Homepage.jsx';
 import ShoppingPage from './ShoppingPage.jsx';
 import ErrorPage from './ErrorPage.jsx';
 import ShoppingCart from './components/shoppingCart/ShoppingCart.jsx';
-import CartContext from './CartContext'; // Assurez-vous de créer ce contexte
+import CartContext from './CartContext'; 
 
 const router = createBrowserRouter([
     {
