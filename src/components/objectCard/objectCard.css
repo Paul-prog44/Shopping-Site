@@ -6,10 +6,11 @@
     width: 200px;
     border-radius: 20px;
     text-align: center;
+    background-color: rgb(125, 240, 244);
 }
 
 .productCard:hover {
-    background-color: rgb(113, 214, 164);
+    background-color: rgb(70, 139, 163);
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
 
 }

@@ -7,7 +7,7 @@ function ObjectCard({product, addProduct}) {
 
     return (
         <div className="productCard">
-        <img src={product.image} style={{width:150}}/>
+        <img src={product.image} style={{width:150, border : '1px solid black'}}/>
         <p>{product.title}</p>
         <p>{product.price}€</p>
         {/* //TODO : Styliser le bouton */}

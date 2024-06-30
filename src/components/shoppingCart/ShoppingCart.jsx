@@ -11,7 +11,8 @@ function ShoppingCart() {
         total += objectInCart.price 
     ))
 
-    console.log(cart)
+    // TODO : mettre une key unique (uuid), ajouter un bouton pour supprimer ou ajouter un des objets
+
     return (
         <>
             <NavigationBar/>
@@ -22,7 +23,7 @@ function ShoppingCart() {
                             border: '1px solid black',
                             margin : 5
                             }}>
-                    <img src={product.image} style={{width:100, margin: 20}}/>
+                    <img src={product.image} style={{width:100, margin: 20, border: '1px solid black'}}/>
                     <p style={{display:'flex', alignItems:"center"}}>{product.title} - {product.price}€</p>
                 </div>
             )): <p>Votre panier est vide</p>}
