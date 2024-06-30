@@ -13,7 +13,7 @@ function Homepage() {
     </header>
 
 
-    <div class="container">
+    <div className="container">
         <section>
             <h2>Notre Vision</h2>
             <p>Chez Mon magasin, nous croyons fermement qu'il est possible de conjuguer consommation et conscience. Notre vision est de devenir le leader du commerce éthique, où chaque produit acheté contribue à un avenir meilleur pour notre planète et ses habitants. Nous nous engageons à offrir à nos clients des articles qui incarnent la qualité, la durabilité et l'équité.</p>
@@ -37,7 +37,7 @@ function Homepage() {
             <p>La qualité est au cœur de notre démarche. Chaque produit que nous proposons est rigoureusement testé pour garantir sa longévité et sa performance. Nous privilégions des fournisseurs qui partagent notre engagement pour la durabilité, en utilisant des matériaux de haute qualité et des procédés de fabrication respectueux de l'environnement.</p>
         </section>
 
-        <section class="environementDiv">
+        <section className="environementDiv">
             <div>
             <h2>Engagement Environnemental</h2>
             <p>Mon magasin s'engage à minimiser son empreinte écologique à chaque étape de son activité. Nous adoptons des pratiques durables telles que :</p>

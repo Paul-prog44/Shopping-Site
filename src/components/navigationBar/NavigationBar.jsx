@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import styles from "./navigationBar.module.css"
 import logo from '../../assets/LogoShop.png'
 import panier from '../../assets/panier.png'
+import { useContext } from "react";
+import CartContext from "../../CartContext";
 
 const linkStyle = {
     margin:10
@@ -12,11 +14,12 @@ const divStyle = {
     alignItems:'center'
 }
 
-function NavigationBar({shoppingCart}) {
-    let total = 0
-    //On vérifie si shopping cart n'est pas null avant de mapper sur les élements qu'il contient
-    shoppingCart && shoppingCart.map((product) => {
-        total += product.price
+function NavigationBar() {
+    const { cart } = useContext(CartContext)
+
+    let totalCartValue=0
+    cart && cart.map((objectInCart) => {
+        totalCartValue += objectInCart.price
     })
 
     return (
@@ -29,7 +32,7 @@ function NavigationBar({shoppingCart}) {
             <div style={divStyle}>
                 <img src={panier} style={{width:40}}/>
                 <Link to="/shoppingcart">ShoppingCart</Link>
-                <p>Total {total.toFixed(2)} €</p>
+                <p>: {totalCartValue.toFixed(2)} €</p>
             </div>
         </div>
         

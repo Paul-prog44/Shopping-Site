@@ -1,15 +1,15 @@
-import { Link } from "react-router-dom"
 import NavigationBar from "./components/navigationBar/NavigationBar"
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import ObjectCard from "./components/objectCard/ObjectCard"
+import CartContext from './CartContext'
 
 
 function ShoppingPage() {
 
+    const { cart, setCart } = useContext(CartContext)
     const [products, setProducts] = useState(null)
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(null)
-    const [shoppingCart , setShoppingCart] = useState([])
 
 
 
@@ -36,13 +36,13 @@ function ShoppingPage() {
 
 
     const addProduct = (newProduct) => {
-        setShoppingCart([...shoppingCart, newProduct])
+        setCart([...cart, newProduct])
     }
 
 
     return (
         <>
-            <NavigationBar shoppingCart={shoppingCart}/>
+            <NavigationBar/>
             <h1>Shopping page</h1>
             {loading && <p>Veuillez patientez</p>}   
             {error && <p>Une erreur est survenue, merci de réessayer</p>}         

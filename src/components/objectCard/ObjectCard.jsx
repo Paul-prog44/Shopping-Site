@@ -10,6 +10,7 @@ function ObjectCard({product, addProduct}) {
         <img src={product.image} style={{width:150}}/>
         <p>{product.title}</p>
         <p>{product.price}€</p>
+        {/* //TODO : Styliser le bouton */}
         <button
             type='button'
             onClick={onButtonClick}>
