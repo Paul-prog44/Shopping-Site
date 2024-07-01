@@ -11,7 +11,6 @@ function ShoppingCart() {
     cart.map((objectInCart) => (
         total += objectInCart.price 
     ))
-    console.log(cart)
 
     const removeProduct= (uid) => {
         const updatedCart = cart.filter(product => product.uid !== uid)
@@ -31,7 +30,8 @@ function ShoppingCart() {
                     <button onClick={() => removeProduct(product.uid)}>Retirer</button>
                 </div>
             )): <p>Votre panier est vide</p>}
-            <h3>Le total de votre panier est de : {total.toFixed(2)}€</h3>
+            <h3>Le total de votre panier est de : {total.toFixed(2)}€<button className="payButton">Valider et payer</button>
+            </h3>
         </>
     )
 }

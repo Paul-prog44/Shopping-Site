@@ -64,7 +64,7 @@ function Homepage() {
             <h2>Conclusion</h2>
             <p>Chez Mon magasin, nous ne nous contentons pas de vendre des produits ; nous offrons une nouvelle façon de consommer, plus respectueuse, plus consciente et plus humaine. Rejoignez-nous dans notre mission pour un monde meilleur et découvrez une expérience d'achat qui fait la différence.</p>
             <p><strong>Mon magasin</strong> - Parce que chaque achat compte.</p>
-            <p>Pour plus d'informations ou pour découvrir nos produits, visitez notre site web <a href="http://www.monmagasin.com">www.monmagasin.com</a> ou passez nous voir en magasin. Ensemble, construisons un avenir durable et équitable.</p>
+            <p>Pour plus d'informations ou pour découvrir nos produits, visitez notre site web <a href="">www.monmagasin.com</a> ou passez nous voir en magasin. Ensemble, construisons un avenir durable et équitable.</p>
         </section>
     </div>
 
