@@ -10,6 +10,7 @@ function ShoppingCart() {
     cart.map((objectInCart) => (
         total += objectInCart.price 
     ))
+    console.log(cart)
 
     // TODO : mettre une key unique (uuid), ajouter un bouton pour supprimer ou ajouter un des objets
 
@@ -18,7 +19,7 @@ function ShoppingCart() {
             <NavigationBar/>
             <h1>Your Shopping cart</h1>
             {cart.length > 0 ? cart.map((product) => (
-                <div style={{display:'flex', 
+                <div  key={product.uid} style={{display:'flex', 
                             flexDirection:'row',
                             border: '1px solid black',
                             margin : 5

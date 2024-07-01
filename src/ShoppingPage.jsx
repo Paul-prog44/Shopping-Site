@@ -2,6 +2,8 @@ import NavigationBar from "./components/navigationBar/NavigationBar"
 import { useContext, useEffect, useState } from "react"
 import ObjectCard from "./components/objectCard/ObjectCard"
 import CartContext from './CartContext'
+import { v4 as uuidv4 } from 'uuid';
+
 
 
 function ShoppingPage() {
@@ -35,7 +37,11 @@ function ShoppingPage() {
     }, [])
 
 
-    const addProduct = (newProduct) => {
+    const addProduct = (product) => {
+        const newProduct = {
+            ...product,
+            uid: uuidv4(),
+        }
         setCart([...cart, newProduct])
     }
 
